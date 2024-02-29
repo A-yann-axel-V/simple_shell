@@ -1,10 +1,10 @@
-Simple Shell
-The simple shell project
+# Simple Shell
+_The simple shell project_
 
-Synopsis
+# Synopsis
 This repository holds all the code necessary for our custom simple shell to run. Our shell currently handles the executions of executables found in the environmental variable PATH, with or without their full paths. Sample commands that our shell supports include ls (/bin/ls), pwd, echo, which, whereis, etc. We've also created the following builtins.
 
-Resources
+- Resources
 Read or watch:
 
 Unix shell
@@ -14,7 +14,8 @@ man or help:
 
 sh (Run sh as well)
 Learning Objectives
-General
+
+- General
 Who designed and implemented the original Unix operating system
 Who wrote the first version of the UNIX shell
 Who invented the B programming language (the direct predecessor to the C programming language)
@@ -30,7 +31,7 @@ How to execute another program with the execve system call
 How to suspend the execution of a process until one of its children terminates
 What is EOF / “end-of-file”?
 
-Builtins
+# Builtins
 exit exits shell (Usage: exit [status])
 env prints environmental variables (Usage: env)
 setenv creates or modifies an environmental variable (Usage: setenv name value)
@@ -39,9 +40,9 @@ cd changes directories (Usage: cd [-][~][path])
 Functions and system calls used
 read, signal, malloc, free, getcwd, chdir, access, execve, wait, write, exit
 
-Compilation
+# Compilation
 Use this command to compile the shell
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
 
-Authors
+# Authors
 Adjumany Yann
