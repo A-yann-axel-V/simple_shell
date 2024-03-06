@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * custom_strlen - Calculate the length of a string
- * @str: The string to calculate the length of
- *
- * Return: The length of the string
- */
-size_t custom_strlen(const char *str)
-{
-        size_t length = 0;
-
-        while (str[length] != '\0')
-        {
-                length++;
-        }
-        return (length);
-}
-
-/**
  * execute_command - Execute a command entered by the user
  * @buffer: The command entered by the user
  */
@@ -84,7 +67,7 @@ int main(void)
                         }
                 }
 
-                buffer[custom_strlen(buffer) - 1] = '\0'; /* Remove newline character */
+                buffer[str_len(buffer) - 1] = '\0'; /* Remove newline character */
                 execute_command(buffer);
         }
 
