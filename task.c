@@ -9,11 +9,12 @@
 size_t custom_strlen(const char *str)
 {
         size_t length = 0;
+
         while (str[length] != '\0')
         {
                 length++;
         }
-        return length;
+        return (length);
 }
 
 /**
@@ -88,5 +89,5 @@ int main(void)
         }
 
         free(buffer);
-        return 0;
+        return (0);
 }
