@@ -6,12 +6,11 @@
  */
 void execute_command(char *buffer)
 {
-	char *token;
 	pid_t pid;
 	int status;
+	char *args[] = { "", NULL};
 
-	token = strtok(buffer, " ");
-	if (token != NULL)
+	if (buffer)
 	{
 		pid = fork();
 		if (pid < 0)
@@ -22,7 +21,8 @@ void execute_command(char *buffer)
 		else if (pid == 0)
 		{
 			/* Child process */
-			if (execve(token, &token, NULL) == -1)
+			args[0] = buffer;
+			if (execve(buffer, args, NULL) == -1)
 			{
 				perror("execve");
 				exit(EXIT_FAILURE);
